@@ -24,8 +24,25 @@
     
     <main id="contenido-principal">
          <div class="container-foto">
-            <img src="../images/shortbread-variedad.jpg" alt="Foto de Jon Butterworth vía Unsplash">
-
+            <picture>
+                <source 
+                    media="(max-width: 600px)"
+                    srcset="../images-webp/shortbread-close-400.webp 400w,
+                            ../images-webp/shortbread-close-800.webp 800w"
+                    sizes="100vw"
+                    type="image/webp">
+                
+                <source 
+                    media="(min-width: 601px)"
+                    srcset="../images-webp/shortbread-variedad-400.webp 400w,
+                            ../images-webp/shortbread-variedad-800.webp 800w,
+                            ../images-webp/shortbread-variedad-1200.webp 1200w"
+                    sizes="(max-width: 1200px) 50vw, 1200px"
+                    type="image/webp">
+                
+                <img src="../images/shortbread-variedad-800.jpg" alt="Shortbread">
+            </picture>
+            
         </div>
             
             <article class="contenido-receta">
@@ -92,11 +109,33 @@
                         <h2>Galería</h2>
                         <div id="galeria">
                             
-                           <img src="../images/shortbread-close.jpg" alt="Shortbread. Foto de Sheri Silver vía Unsplash" class="galeria-img">
-                                                    
-                            <img src="../images/shortbread-cocina.jpg" alt="Shortbread. Foto de Skon Communication vía Unsplash" class="galeria-img">
-                           
-                            <img src="../images/shortbread-galletas.jpg" alt="Shortbread. Foto de Heather Barnes vía Unsplash" class="galeria-img">
+                           <picture>
+                                <source 
+                                    srcset="../images-webp/shortbread-close-400.webp 400w,
+                                            ../images-webp/shortbread-close-800.webp 800w"
+                                    sizes="(max-width: 768px) 100vw, 250px"
+                                    type="image/webp">
+                                <img src="../images/shortbread-close-800.jpg" alt="Shortbread. Foto de Sheri Silver vía Unsplash">
+                            </picture>
+
+                            <picture>
+                                <source 
+                                    srcset="../images-webp/shortbread-cocina-400.webp 400w,
+                                            ../images-webp/shortbread-cocina-800.webp 800w"
+                                    sizes="(max-width: 768px) 100vw, 250px"
+                                    type="image/webp">
+                                <img src="../images/shortbread-cocina-800.jpg" alt="Shortbread. Foto de Skon Communication vía Unsplash" class="galeria-img">
+                            </picture>
+
+                            <picture>
+                                <source 
+                                    srcset="../images-webp/shortbread-galletas-400.webp 400w,
+                                            ../images-webp/shortbread-galletas-800.webp 800w"
+                                    sizes="(max-width: 768px) 100vw, 250px"
+                                    type="image/webp">
+                                <img src="../images/shortbread-galletas-800.jpg" alt="Shortbread. Foto de Heather Barnes vía Unsplash" class="galeria-img">
+                            </picture>
+                            
                          
                         </div>
 

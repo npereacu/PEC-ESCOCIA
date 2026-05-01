@@ -27,7 +27,40 @@
     <main id="contenido-principal">
         
         <div class="container-foto">
-            <img src="../images/scotch-pie-tarta.jpg" alt="Scotch Pie. Foto de David Foodphototasty vía Unsplash">
+           <picture>
+                <source 
+                    media="(max-width: 600px)"
+                    srcset="../images-webp/scotch-pie-close-400.webp 400w,
+                            ../images-webp/scotch-pie-close-800.webp 800w"
+                    sizes="100vw"
+                    type="image/webp">
+                                
+                <source 
+                    media="(max-width: 600px)"
+                    srcset="../images/scotch-pie-close-400.jpg 400w,
+                            ../images/scotch-pie-close-800.jpg 800w"
+                    sizes="100vw"
+                    type="image/jpeg">
+
+                    <source 
+                    media="(min-width: 601px)"
+                    srcset="../images-webp/scotch-pie-tarta-400.webp 400w,
+                            ../images-webp/scotch-pie-tarta-800.webp 800w,
+                            ../images-webp/scotch-pie-tarta-1200.webp 1200w"
+                    sizes="(max-width: 1200px) 50vw, 1200px"
+                    type="image/webp">
+                
+                <source 
+                    media="(min-width: 601px)"
+                    srcset="../images/scotch-pie-tarta-400.jpg 400w,
+                            ../images/scotch-pie-tarta-800.jpg 800w,
+                            ../images/scotch-pie-tarta-1200.jpg 1200w"
+                    sizes="(max-width: 1200px) 50vw, 1200px"
+                    type="image/jpeg">
+                
+                <img src="../images/scotch-pie-tarta-800.jpg" alt="Scotch Pie. Foto de David Foodphototasty vía Unsplash">
+            </picture>
+            
 
         </div>
 
@@ -70,11 +103,33 @@
                 <h2>Galería</h2>
                 <div id="galeria">
                                         
-                        <img src="../images/scotch-pie.jpg" alt="Scotch Pie. Foto de Rob Wicks vía Unsplash" class="galeria-img">
-                                         
-                        <img src="../images/scotch-pie-general.jpg" alt="Scotch Pie. Foto de Melissa Walker vía Unsplash" class="galeria-img">
-                    
-                        <img src="../images/scotch-pie-close.jpg" alt="Scotch Pie. Foto de Kenneth Schipper vía Unsplash" class="galeria-img">
+                    <picture>
+                        <source 
+                            srcset="../images-webp/scotch-pie-400.webp 400w,
+                                    ../images-webp/scotch-pie-800.webp 800w"
+                            sizes="(max-width: 768px) 100vw, 250px"
+                            type="image/webp">
+                        <img src="../images/scotch-pie-800.jpg" alt="Scotch Pie. Foto de Rob Wicks vía Unsplash" class="galeria-img">
+                    </picture>    
+
+                    <picture>
+                        <source 
+                            srcset="../images-webp/scotch-pie-general-400.webp 400w,
+                                    ../images-webp/scotch-pie-general-800.webp 800w"
+                            sizes="(max-width: 768px) 100vw, 250px"
+                            type="image/webp">
+                        <img src="../images/scotch-pie-general-800.jpg" alt="Scotch Pie. Foto de Melissa Walker vía Unsplash" class="galeria-img">
+                    </picture>                     
+
+                    <picture>
+                        <source 
+                            srcset="../images-webp/scotch-pie-close-400.webp 400w,
+                                    ../images-webp/scotch-pie-close-800.webp 800w"
+                            sizes="(max-width: 768px) 100vw, 250px"
+                            type="image/webp">
+                        <img src="../images/scotch-pie-close-800.jpg" alt="Scotch Pie. Foto de Kenneth Schipper vía Unsplash" class="galeria-img">
+                    </picture>
+                        
                                    
                 </div>
 

@@ -3,5 +3,9 @@
   "reporters": ["...", "parcel-reporter-static-files-copy"],
   "transformers": {
     "*.{jpg,jpeg,png,gif,webp,svg}": ["@parcel/transformer-raw"]
+  },
+  "resolvers": ["@parcel/resolver-default"],
+  "optimizers": {
+    "*.{jpg,jpeg,png,gif,webp}": []
   }
 }

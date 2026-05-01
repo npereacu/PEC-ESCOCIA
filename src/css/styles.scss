@@ -67,6 +67,14 @@ header {
 main {
     max-width: 1400px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .enlace {
@@ -102,6 +110,7 @@ abbr {
         object-fit: cover; 
         object-position: center;
         display: block;
+        z-index: -1;
     }
 }
 
@@ -154,8 +163,8 @@ abbr {
 .container-principal {
     position: relative;
     width: 100%;
-    height: 500px; 
-    overflow: hidden; 
+    height: 100vh; 
+    
     
     img {
         position: absolute;
@@ -178,9 +187,11 @@ abbr {
     border-radius: 16px;
     padding: 2rem;
     text-align: center;
-    top: 70%; 
+    top: 50%; 
     transform: translateY(-50%); 
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    overflow: hidden;
+    transition: clip-path 0.5s ease, border-radius 0.5s ease;
     
     h1 {
         font-family: $fuente-titulos;
@@ -195,6 +206,88 @@ abbr {
         font-size: 1.2rem;
     }
 }
+
+.container-ertaina {
+    clip-path: inset(0% round 16px);
+}
+
+.container-ertaina:hover {
+    clip-path: polygon(
+    0% 100%,
+    0% 28%,
+    6% 28%,
+    6% 8%,
+    14% 8%,
+    14% 28%,
+    23% 28%,
+    23% 8%,
+    31% 8%,
+    31% 28%,
+    40% 28%,
+    40% 8%,
+    48% 8%,
+    48% 28%,
+    57% 28%,
+    57% 8%,
+    65% 8%,
+    65% 28%,
+    74% 28%,
+    74% 8%,
+    82% 8%,
+    82% 28%,
+    91% 28%,
+    91% 8%,
+    100% 8%,
+    100% 100%
+);
+}
+
+.container-ertaina:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/flag-scotland.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: -1;  
+}
+
+.container-ertaina h1,
+.container-ertaina p {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.cardo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;  /* Esto empuja el cardo hacia abajo */
+    margin-bottom: 0;
+    width: 100%;
+    padding: 2rem 0;
+    position: relative;  /* Cambia de absolute a relative */
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cardo-reveal {
+    width: 700px;
+    height: auto;
+    clip-path: inset(100% 0 0 0);
+    animation: revealUp 2.3s forwards cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@keyframes revealUp {
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+ 
 
 
 
@@ -542,8 +635,9 @@ footer p {
     }
 
     .container-ertaina {
-        max-width: 600px;
-        padding: 1.5rem;
+       max-width: 700px;
+        top: 45%;
+        padding: 1.8rem;
     }
 
     .contenido-receta {
@@ -560,6 +654,17 @@ footer p {
         margin-left: 1rem;
         margin-right: 1rem;
     }
+
+    .cardo-reveal {
+        width: 80%;
+        max-width: 600px;
+    }  
+
+    .cardo-container {
+        margin-top: 18rem;
+    }
+
+    
 }
 
 // MOVIL
@@ -588,6 +693,11 @@ footer p {
         font-size: 1.4rem;
     }
 
+    .pantalla-completa {
+        height: auto;
+        min-height: 100vh;
+    }
+
     .portada-recetas, 
     .recetas-lista {
         grid-template-columns: 1fr;
@@ -596,13 +706,15 @@ footer p {
     }
 
     .receta-card img {
-        height: 180px;
+        height: auto;
+        aspect-ratio: 16 / 9;
     }
 
     .container-ertaina {
-        top: 60%;
+        top: 40vh;
         width: 90%;
         padding: 1rem;
+        transform: translateY(-50%);
     }
 
     .container-ertaina h1 {
@@ -614,15 +726,20 @@ footer p {
     }
 
     .contenido-receta {
-        margin: -5rem auto 2rem auto;
-        padding: 1.3rem;
+        max-width: none;          
+        margin: -2rem auto 2rem auto;
         margin-left: 1rem;
         margin-right: 1rem;
+        box-sizing: border-box;
     }
 
     .container-enlaces {
         margin-left: 1rem;
         margin-right: 1rem;
+    }
+
+    .container-foto {
+        height: 40vh; 
     }
 
     footer {
@@ -638,5 +755,67 @@ footer p {
 
     .footer-derecha {
         text-align: center;
+    }
+
+    .cardo-reveal {
+        width: 85%; 
+        max-width: 400px;
+    }
+
+    .cardo-container {
+        margin-top: 2rem;
+    }
+
+    .container-principal {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    
+
+}
+
+//MÓVIL MÁS PEQUEÑO
+@media (max-width: 480px) {
+    .container-ertaina {
+        top: 35vh;
+        width: 95%;
+        padding: 0.75rem;
+    }
+
+    .container-ertaina h1 {
+        font-size: 1.5rem;
+    }
+
+    .container-foto {
+        height: 30vh;
+    }
+    
+    .contenido-receta {
+        width: calc(100% - 1rem);
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        padding: 0.75rem;
+    }
+
+    .cardo-reveal {
+        width: 85%;
+        max-width: 300px;
+    }
+
+    .cardo-container {
+        margin-top: 10rem;
+    }
+
+    .pantalla-completa {
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .container-foto img {
+        object-fit: cover;
+        object-position: 50% 30%;
+        transform: scale(1.2);
     }
 }
