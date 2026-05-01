@@ -266,11 +266,11 @@ abbr {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: auto;  /* Esto empuja el cardo hacia abajo */
+    margin-top: auto; 
     margin-bottom: 0;
     width: 100%;
     padding: 2rem 0;
-    position: relative;  /* Cambia de absolute a relative */
+    position: relative;
     pointer-events: none;
     z-index: 1;
 }
@@ -812,10 +812,4 @@ footer p {
     }
 }
 
-@media (max-width: 600px) {
-    .container-foto img {
-        object-fit: cover;
-        object-position: 50% 30%;
-        transform: scale(1.2);
-    }
-}
+
