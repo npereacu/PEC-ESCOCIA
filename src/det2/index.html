@@ -109,13 +109,18 @@
                         <h2>Galería</h2>
                         <div id="galeria">
                             
-                           <picture>
+                            <picture>
                                 <source 
                                     srcset="../images-webp/shortbread-close-400.webp 400w,
                                             ../images-webp/shortbread-close-800.webp 800w"
                                     sizes="(max-width: 768px) 100vw, 250px"
                                     type="image/webp">
-                                <img src="../images/shortbread-close-800.jpg" alt="Shortbread. Foto de Sheri Silver vía Unsplash">
+                                <img src="../images/shortbread-close-800.jpg" 
+                                    srcset="../images/shortbread-close-400.jpg 400w,
+                                            ../images/shortbread-close-800.jpg 800w"
+                                    sizes="(max-width: 768px) 100vw, 250px"
+                                    alt="Shortbread. Foto de Sheri Silver vía Unsplash"
+                                    class="galeria-img" loading="lazy">
                             </picture>
 
                             <picture>
@@ -124,7 +129,12 @@
                                             ../images-webp/shortbread-cocina-800.webp 800w"
                                     sizes="(max-width: 768px) 100vw, 250px"
                                     type="image/webp">
-                                <img src="../images/shortbread-cocina-800.jpg" alt="Shortbread. Foto de Skon Communication vía Unsplash" class="galeria-img">
+                                <img src="../images/shortbread-cocina-800.jpg" 
+                                    srcset="../images/shortbread-cocina-400.jpg 400w,
+                                            ../images/shortbread-cocina-800.jpg 800w"
+                                    sizes="(max-width: 768px) 100vw, 250px"
+                                    alt="Shortbread. Foto de Skon Communication vía Unsplash"
+                                    class="galeria-img" loading="lazy">
                             </picture>
 
                             <picture>
@@ -133,10 +143,14 @@
                                             ../images-webp/shortbread-galletas-800.webp 800w"
                                     sizes="(max-width: 768px) 100vw, 250px"
                                     type="image/webp">
-                                <img src="../images/shortbread-galletas-800.jpg" alt="Shortbread. Foto de Heather Barnes vía Unsplash" class="galeria-img">
+                                <img src="../images/shortbread-galletas-800.jpg" 
+                                    srcset="../images/shortbread-galletas-400.jpg 400w,
+                                            ../images/shortbread-galletas-800.jpg 800w"
+                                    sizes="(max-width: 768px) 100vw, 250px"
+                                    alt="Shortbread. Foto de Heather Barnes vía Unsplash"
+                                    class="galeria-img" loading="lazy">
                             </picture>
                             
-                         
                         </div>
 
                     </div>
@@ -145,7 +159,7 @@
 
                         <h2>Cómo preparar Shortbread</h2>
                         <div class="video-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/__6mfv7NBWw?si=i4seAgpUx_aoePFj" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/__6mfv7NBWw?si=i4seAgpUx_aoePFj" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                         </div>
 
                     </div>
@@ -162,7 +176,7 @@
         </div>
     </footer>
 
-    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/main.js" defer></script>
 
 </body>
 </html>

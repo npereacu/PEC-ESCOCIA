@@ -102,14 +102,19 @@
                
                 <h2>Galería</h2>
                 <div id="galeria">
-                                        
+                                                        
                     <picture>
                         <source 
                             srcset="../images-webp/scotch-pie-400.webp 400w,
                                     ../images-webp/scotch-pie-800.webp 800w"
                             sizes="(max-width: 768px) 100vw, 250px"
                             type="image/webp">
-                        <img src="../images/scotch-pie-800.jpg" alt="Scotch Pie. Foto de Rob Wicks vía Unsplash" class="galeria-img">
+                        <img src="../images/scotch-pie-800.jpg" 
+                            srcset="../images/scotch-pie-400.jpg 400w,
+                                    ../images/scotch-pie-800.jpg 800w"
+                            sizes="(max-width: 768px) 100vw, 250px"
+                            alt="Scotch Pie. Foto de Rob Wicks vía Unsplash" 
+                            class="galeria-img" loading="lazy">
                     </picture>    
 
                     <picture>
@@ -118,7 +123,12 @@
                                     ../images-webp/scotch-pie-general-800.webp 800w"
                             sizes="(max-width: 768px) 100vw, 250px"
                             type="image/webp">
-                        <img src="../images/scotch-pie-general-800.jpg" alt="Scotch Pie. Foto de Melissa Walker vía Unsplash" class="galeria-img">
+                        <img src="../images/scotch-pie-general-800.jpg" 
+                            srcset="../images/scotch-pie-general-400.jpg 400w,
+                                    ../images/scotch-pie-general-800.jpg 800w"
+                            sizes="(max-width: 768px) 100vw, 250px"
+                            alt="Scotch Pie. Foto de Melissa Walker vía Unsplash" 
+                            class="galeria-img" loading="lazy">
                     </picture>                     
 
                     <picture>
@@ -127,16 +137,20 @@
                                     ../images-webp/scotch-pie-close-800.webp 800w"
                             sizes="(max-width: 768px) 100vw, 250px"
                             type="image/webp">
-                        <img src="../images/scotch-pie-close-800.jpg" alt="Scotch Pie. Foto de Kenneth Schipper vía Unsplash" class="galeria-img">
+                        <img src="../images/scotch-pie-close-800.jpg" 
+                            srcset="../images/scotch-pie-close-400.jpg 400w,
+                                    ../images/scotch-pie-close-800.jpg 800w"
+                            sizes="(max-width: 768px) 100vw, 250px"
+                            alt="Scotch Pie. Foto de Kenneth Schipper vía Unsplash" 
+                            class="galeria-img" loading="lazy">
                     </picture>
-                        
-                                   
+                                        
                 </div>
 
         
                 <h2>Cómo preparar Scotch Pie</h2>
                 <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ItQ3AwcR3pU?si=lNUCQi-74gc81Pg8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ItQ3AwcR3pU?si=lNUCQi-74gc81Pg8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                 </div>
             
             </article>
@@ -152,7 +166,7 @@
         </div>
     </footer>
 
-    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/main.js" defer></script>
 
 </body>
 </html>
