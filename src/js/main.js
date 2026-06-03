@@ -1,4 +1,4 @@
-﻿import Swal from 'sweetalert2';
+﻿
 
 document.addEventListener('DOMContentLoaded', function() {
     
@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    const btnDato = document.getElementById('btn-dato-curioso');
-        const btnDet1 = document.getElementById('btn-dato-det1');
+    const btnDet1 = document.getElementById('btn-dato-det1');
     if (btnDet1) {
-        btnDet1.addEventListener('click', function() {
+        btnDet1.addEventListener('click', async function() {
+           const Swal = await import('sweetalert2').then(module => module.default);
             Swal.fire({
                 title: 'Dato curioso',
                 text: '¿Sabías que el Scotch Pie se come tradicionalmente en los estadios de fútbol escoceses?',
@@ -44,7 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const btnDet2 = document.getElementById('btn-dato-det2');
     if (btnDet2) {
-        btnDet2.addEventListener('click', function() {
+        btnDet2.addEventListener('click', async function() {
+            const Swal = await import('sweetalert2').then(module => module.default);
             Swal.fire({
                 title: 'Dato curioso',
                 text: '¿Sabías que el Shortbread era considerado un lujo y se reservaba solo para ocasiones especiales?',
